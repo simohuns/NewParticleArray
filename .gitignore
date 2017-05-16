@@ -63,6 +63,11 @@ TestResults/
 *.sql
 *.sqlite
 
+####################
+# Publish profiles #
+####################
+*.pubxml
+
 # OS generated files #
 ######################
 .DS_Store?
