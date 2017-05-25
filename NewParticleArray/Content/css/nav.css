@@ -28,7 +28,7 @@ nav ul li {
     display: block;
     color: rgb(32, 32, 32);
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .navText:hover, .navText:focus {
@@ -48,7 +48,6 @@ nav ul li {
     }
     
     #menu {
-        background: inherit;
         width: auto;
     }
 
@@ -60,7 +59,7 @@ nav ul li {
         display: inline-block;
         height: inherit;
         font-weight: bold;
-        transition: background 0.2s ease, color 0.2s ease, height 0.2s;
+        transition: background 0.2s ease, color 0.2s ease;
         float: right;
     }
     
@@ -80,6 +79,11 @@ nav ul li {
     #menuCheck:checked + #menu #menuExpand:hover {
         color: dimgray;
         background: rgb(32, 32, 32);
+    }
+
+    #menuCheck:checked + #menu,
+    #menuCheck:checked + #menu {
+        background: inherit;
     }
     
     #menuCheck + #menu nav {
