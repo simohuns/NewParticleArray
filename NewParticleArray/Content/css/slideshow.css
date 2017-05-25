@@ -1,0 +1,40 @@
+#slideshow {
+    position: absolute;
+    top: 72px;
+    bottom: 72px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1920px;
+    background: black;
+}
+
+#slideshow ul {
+    position: inherit;
+    width: inherit;
+    height: 100%;
+}
+
+#slideshow ul li {
+    position: inherit;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+/* These percentages will need to change depending on the number of slides */
+/* Current setup for 6 slides with 2% for transition */
+@keyframes fade {
+    0% { opacity: 1; z-index: 1;}
+    14.667% { opacity: 1; z-index: 1;}
+    16.667% { opacity: 0; z-index: 0;}
+    98% { opacity: 0; z-index: 0;}
+    100% { opacity: 1; z-index: 1;}
+}
+
+@media (max-width : 720px) {
+    #slideshow {
+        top: 52px;
+        bottom: 52px;
+    }    
+}

@@ -1,0 +1,42 @@
+﻿@model NewParticleArray.Models.ContactModel
+
+@{
+    ViewBag.Title = "Contact";
+}
+@section formcss{
+    @Styles.Render("~/Content/formcss")
+}
+@section jqueryValidate {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<article>
+    <h2>@(ViewBag.Title)</h2>
+    <h3>Say something :D</h3>
+
+    <div class="columns">
+        <div class="full">
+            @using (Html.BeginForm("Index", "Contact", FormMethod.Post, new { @autocomplete = "off" }))
+            {
+                @Html.ValidationSummary(true)
+
+                @Html.LabelFor(model => model.Name)
+                @Html.ValidationMessageFor(model => model.Name)
+                @Html.EditorFor(model => model.Name)
+
+                @Html.LabelFor(model => model.Email)
+                @Html.ValidationMessageFor(model => model.Email)
+                @Html.EditorFor(model => model.Email)
+
+                @Html.LabelFor(model => model.Message)
+                @Html.ValidationMessageFor(model => model.Message)
+                @Html.TextAreaFor(model => model.Message)
+
+                <input type="submit" name="submit" value="Send" class="button" title="Send Message" />
+            }
+        </div>
+    </div>
+
+</article>
+
+

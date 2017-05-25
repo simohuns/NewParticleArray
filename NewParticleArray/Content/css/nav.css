@@ -1,0 +1,102 @@
+#logo {
+    display: inline-block;
+    font-family: 'Manteka';
+    font-size: 225%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#menu {
+    float: right;
+    display: inline-block;
+    text-align: center;
+    font-size: 100%;
+    width: 70%;
+}
+
+#menu nav {
+    border-bottom: none;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 25%;
+}
+
+.navText, .navActive {
+    height: inherit;
+    display: block;
+    color: rgb(32, 32, 32);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.navText:hover, .navText:focus {
+    background: lightgray;
+    outline: none;
+}
+
+.navText:active, .navActive {
+    color: dimgray;
+    background: rgb(32, 32, 32);
+}
+
+
+@media (max-width : 720px) {
+    #logo {
+        font-size: 200%;
+    }
+    
+    #menu {
+        background: inherit;
+        width: auto;
+    }
+
+    #menu nav {
+        background: inherit;
+    }
+    
+    #menuExpand {
+        display: inline-block;
+        height: inherit;
+        font-weight: bold;
+        transition: background 0.2s ease, color 0.2s ease, height 0.2s;
+        float: right;
+    }
+    
+    #logo, #menuExpand {
+        font-size: 175%;
+        width: 50px;
+        text-align: center;
+    }
+
+    #menuCheck + #menu #menuExpand:hover,
+    #menuCheck + #menu #menuExpand:focus
+    {
+        background: lightgray;
+    }
+    
+    #menuCheck:checked + #menu #menuExpand,
+    #menuCheck:checked + #menu #menuExpand:hover {
+        color: dimgray;
+        background: rgb(32, 32, 32);
+    }
+    
+    #menuCheck + #menu nav {
+        display: none;
+    }
+
+    #menuCheck:checked + #menu nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50px;
+        display: block;
+        height: inherit;
+        border-bottom: 2px solid rgb(32, 32, 32);
+    }
+    
+    nav ul li {
+        width: 100%;
+    }
+}

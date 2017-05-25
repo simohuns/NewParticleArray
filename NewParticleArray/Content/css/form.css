@@ -1,0 +1,109 @@
+input[type='text'], input[type='email'], textarea {
+    clear: both;
+    outline: none;
+    border: none;
+    color: dimgray;
+    background: white;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    box-shadow: lightgray 0px 0px 0px 2px inset;
+    transition: color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
+    height: 250px;
+}
+
+input[type='text']:focus, input[type='email']:focus, textarea:focus {
+    color: inherit;
+    box-shadow: dimgray 0px 0px 0px 2px inset;
+}
+
+label, .field-validation-error {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+label {
+    display: inline-block;
+    color: rgb(32, 32, 32);
+}
+
+.field-validation-error {
+    display: block;
+    float: right;
+    color: firebrick;
+}
+
+input[type=submit] {
+    border: none;
+    outline: none;
+}
+
+#sentMailEventImage, #failMailEventImage {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 200px;
+    background: inherit;
+    box-shadow: dimgray 0px 0px 0px 4px inset;
+    color: rgba(105, 105, 105, 0);
+}
+
+#sentMailEventImage > p {
+    display: inline-block;
+    animation: sent;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+#failMailEventImage > p {
+    display: inline-block;
+    animation: fail;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes sent {
+    0% { color: rgba(105, 105, 105, 0);}
+    10% { color: rgba(105, 105, 105, 1);}
+    25% { transform: rotateX(0deg); color: rgba(65, 163, 23, 1);}
+    50% { transform: rotateX(360deg); color: rgba(65, 163, 23, 1);}
+    55% { transform: translateY(20%); }
+    75% { transform: translateY(-200%); }
+    76% { transform: translateY(200%); }
+    95% { transform: translateY(-20%); }
+    100% { transform: translateY(0%); color: limegreen;}
+}
+
+@keyframes fail {
+    0% { color: rgba(105, 105, 105, 0);}
+    10% { color: rgba(105, 105, 105, 1);}
+    25% { transform: translateY(25%); }
+    40% { transform: translateY(-35%); }
+    70% { transform: translateY(-35%); color: rgba(105, 105, 105, 1);}
+    75% { transform: translateY(10%); }
+    80% { transform: translateY(-7%); }
+    85% { transform: translateY(5%); }
+    90% { transform: translateY(-3%); }
+    95% { transform: translateY(0%); }
+    100% { transform: translateY(0%); color: firebrick;}
+}
+
+@media(max-width:720px) {
+    #sentMailEventImage, #failMailEventImage {
+        font-size: 100px;
+    }
+}

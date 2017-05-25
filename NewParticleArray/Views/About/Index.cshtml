@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+<article>
+    <h2>@(ViewBag.Title)</h2>
+    <h3>Who I am and What I do</h3>
+
+    <div class="columns">
+        <div class="half">
+            <div class="image"
+                 style="background-image: url('../../Content/images/profile.png'); background-size: contain;"
+                 title="My face."
+            ></div>
+        </div>
+        <div class="divider"></div>
+        <div class="half">
+            <h3>Who I am</h3>
+            <p>
+                My name is Simon Hunsberger.  I have been making short films since before my voice changed.
+                Those early projects were atrocious, but after years of editing and special effects, I have
+                begun to show some improvement.
+            </p>
+            <p>
+                I studied Computer Science at Geneva College in Pennsylvania.  Even though I am American, I
+                grew up overseas in Ulaanbaatar, Mongolia.  I like technology, food, video games, and a good
+                bass drop.
+            </p>
+            <br />
+
+            <h3>What I do</h3>
+            <p>
+                Making movies is a hobby.  I try to do it whenever I have a bit of free time.  While I like 
+                brainstorming stories and filming them, I love using After Effects to design title graphics
+                and add some excitement!  Life without an explosion here or there would be pretty boring.
+            </p>
+            <p>
+                When I need to learn more, I follow tutorials made by smart people.  Regardless of plot, I
+                usually find a way to incorporate what I learned into a video.
+            </p>
+            <br />
+
+            <h3>But, What is this Website?</h3>
+            <p>
+                This website was handcrafted with HTML, CSS, and JavaScript, then glued together with some
+                ASP.NET and a little love.
+            </p>
+            <p>
+                I love to rummage around in code.  I could have used Bootstrap and other fancy bling, but
+                sometimes you don't learn as much if you resort to using libraries and templates for 
+                everything.  I much prefer the flexibility and functionality that designing from scratch 
+                affords.  You can see how this site works over on 
+                <a href="@(System.Web.Configuration.WebConfigurationManager.AppSettings["GITHub"])" target="_blank" title="See the website code!">GitHub</a>.
+            </p>
+            <br />
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="full">
+            <h3 class="center">Questions or comments?</h3>
+            @Html.ActionLink("Contact me!", "Index", "Contact", null, new { @class = "button" })
+        </div>
+    </div>
+</article>
+

@@ -1,0 +1,28 @@
+﻿@model NewParticleArray.Models.ContactModel
+
+@section formcss{
+    @Styles.Render("~/Content/formcss")
+}
+
+<article>
+    <h2>@(ViewBag.Title)</h2>
+    <h3>@(ViewBag.Message)</h3>
+
+    <div class="columns">
+        <div class="full">
+            <div class="image bottomSpace" title="@(ViewBag.Title)">
+                <div id="eventImageContainer" class="unselectable pointer">
+                    <div id="@((Model.Success) ? "sentMailEventImage" : "failMailEventImage")">
+                        <p>&#x2709;</p>
+                    </div>
+                </div>
+            </div>
+            @{
+                if (!Model.Success)
+                {
+                    @Html.ActionLink("Try Again?", "Retry", Model, new { @class = "button" })
+                }
+            }
+        </div>
+    </div>
+</article>

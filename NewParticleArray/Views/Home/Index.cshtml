@@ -1,0 +1,27 @@
+﻿@using NewParticleArray.Models
+
+@{
+    ViewBag.Title = "Home";
+    List<Slides> Slides = (List<Slides>)ViewData.Model;
+}
+@section slideshowcss{
+    @Styles.Render("~/Content/slideshowcss")
+}
+<div id="slideshow">
+    <ul>
+        @{ 
+            if (Slides != null)
+            {
+                foreach (var slide in Slides)
+                {
+                    double slideDelay = Math.Round(slide.ShowLength - (Slides.Count - (slide.SequenceNo - 1)) * (slide.ShowLength / Slides.Count), 2);
+                    <li
+                        style="background: black url('@slide.SlideLink') no-repeat center center;
+                        background-size: cover; animation: fade @(slide.ShowLength)s @(slideDelay)s infinite;"
+                        title="@slide.SlideTitle"
+                    ></li>
+                }
+            }
+        }
+    </ul>
+</div>

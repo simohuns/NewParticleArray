@@ -1,0 +1,50 @@
+﻿@using NewParticleArray.Models
+
+@{
+    ViewBag.Title = "Projects";
+    List<Projects> Projects = (List<Projects>)ViewData.Model;
+}
+@section videocss{
+    @Styles.Render("~/Content/videocss")
+}
+@section popupplayer {
+    @Styles.Render("~/Content/popupplayercss")
+    @Scripts.Render("~/bundles/popupPlayer")
+}
+<article>
+    <h2>@(ViewBag.Title)</h2>
+    <h3>An assortment of the stuff I made</h3>
+
+    @{ 
+        if (Projects != null)
+        {
+            foreach (var project in Projects)
+            {
+                <div class="columns">
+                    <div class="half">
+                        @* Image of project, with play button.  Uses id in popup javascript to link to YouTube video *@
+                        <a id="@project.ProjectLink" class="video" href="http://youtu.be/@(project.ProjectLink)" target="_blank" style="background-image: url('@project.ImageLink');" title="@project.ImageTitle">
+                            <svg class="playbutton">
+                                <text x="50%" y="50%" dy=".35em">&rtrif;</text>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="half">
+                        <h3>@project.ProjectTitle</h3>
+
+                        @Html.Raw(project.ProjectText)
+                    </div>
+                </div>
+            }
+        }
+    }
+
+    <div class="columns">
+        <div class="full">
+            <h3 class="center">Want to see more?</h3>
+            <a class="button" href="@(System.Web.Configuration.WebConfigurationManager.AppSettings["YouTube"])" target="_blank" title="Go to my YouTube channel">Check out my YouTube!</a>
+        </div>
+    </div>
+</article>
+

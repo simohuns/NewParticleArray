@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="particle, array, [], productions, videos, movies, editing, special, effects, vfx, simon, hunsberger, resume">
+    <meta name="description" content="Particle Array Productions: A showcase of my vides, interests, and excess of free time">
+    <meta name="author" content="Simon Hunsberger">
+
+    <meta property="og:url" content="@(Request.Url.Scheme + System.Uri.SchemeDelimiter + Request.Url.Host)" />
+    <meta property="og:image" content="@Url.Content("~/og_image.jpg")" />
+    <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:description" content="Particle Array Productions: A showcase of my videos, interests, and excess of free time" />
+
+    <title>@ViewBag.Title - Particle Array</title>
+
+    <link href="@Url.Content("~/favicon.ico")" rel="icon" type="image/x-icon" />
+
+    @Styles.Render("~/Content/maincss")
+    @RenderSection("slideshowcss", required: false)
+    @RenderSection("videocss", required: false)
+    @RenderSection("formcss", required: false)
+    @RenderSection("popupplayer", required: false)
+</head>
+<body>
+    <div id="container">
+        <header class="unselectable pointer">
+            <div class="section">
+                <div class="paddingContainer">
+                    <!--Logo-->
+                    <div id="logo" title="Particle Array Productions">
+                        <p>
+                            P<span class="smallHide"><span class="smaller">article</span> []</span>
+                            <span class="bigHide">[]</span>
+                        </p>
+                    </div>
+
+                    <!--Menu-->
+                    <input type="checkbox" id="menuCheck" class="hide" />
+                    <label for="menuCheck" id="menu">
+                        <p id="menuExpand" class="link bigHide" title="Menu">&equiv;
+                        </p>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <@((ViewBag.Title == "Home") ? Html.Raw("p class=\"navActive\"") : Html.Raw("a class=\"navText\" href=\"" + Url.Action("Index", "Home") + "\"")) title="Home">Home
+                                    </@(ViewBag.Title == "Home" ? "p" : "a")>
+                                </li><!--
+                                --><li>
+                                    <@((ViewBag.Title == "About") ? Html.Raw("p class=\"navActive\"") : Html.Raw("a class=\"navText\" href=\"" + Url.Action("Index", "About") + "\"")) title="About">About
+                                    </@(ViewBag.Title == "About" ? "p" : "a")>
+                                </li><!--                                         
+                                --><li>
+                                    <@((ViewBag.Title == "Projects") ? Html.Raw("p class=\"navActive\"") : Html.Raw("a class=\"navText\" href=\"" + Url.Action("Index", "Projects") + "\"")) title="Projects">Projects
+                                    </@(ViewBag.Title == "Projects" ? "p" : "a")>
+                                </li><!--                                         
+                                --><li>
+                                    <@((ViewBag.Title == "Contact") ? Html.Raw("p class=\"navActive\"") : Html.Raw("a class=\"navText\" href=\"" + Url.Action("Index", "Contact") + "\"")) title="Contact">Contact
+                                    </@(ViewBag.Title == "Contact" ? "p" : "a")>
+                                </li>
+                            </ul>
+                        </nav>
+                    </label>
+                </div>
+            </div>
+        </header>
+
+        <div id="content">
+            <div class="contentPush"></div>
+
+            @RenderBody()
+
+            <div class="contentPush"></div>
+        </div>
+    
+        <footer class="unselectable pointer">
+            <div class="section">
+                <div class="paddingContainer">
+                    <p>&copy; @DateTime.Now.Year Simon Hunsberger</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @RenderSection("jqueryValidate", required: false)
+</body>
+</html>
