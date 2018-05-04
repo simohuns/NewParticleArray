@@ -2,7 +2,7 @@
     background-color: gray;
 }
 
-.playbutton {
+.play-button {
     display: inline-block;
     width: inherit;
     height: inherit;
@@ -11,13 +11,13 @@
     transition: background 0.1s ease
 }
 
-.playbutton svg {
+.play-button svg {
     width: inherit;
     height: inherit;
     pointer-events: none;
 }
 
-.playbutton text {
+.play-button text {
     text-anchor: middle;
     pointer-events: auto;
     fill: rgb(32, 32, 32);
@@ -31,27 +31,27 @@
     outline: none;
 }
 
-.video:hover .playbutton, .video:focus .playbutton {
+.video:hover .play-button, .video:focus .play-button {
     background: rgba(0, 0, 0, 0.1);
 }
 
-.video:active .playbutton {
+.video:active .play-button {
     background: rgba(0, 0, 0, 0);
 }
 
-.video:hover .playbutton text, .video:focus .playbutton text {
+.video:hover .play-button text, .video:focus .play-button text {
     stroke: lightgray;
     stroke-width: 6px;
 }
 
-.video:active .playbutton text {
-    animation: playActive 0.5s;
+.video:active .play-button text {
+    animation: play-button-active 0.5s;
     fill: rgb(32, 32, 32);
     stroke: dimgray;
     stroke-width: 3px;
 }
 
-@keyframes playActive
+@keyframes play-button-active
 {
     0% {transform: translateX(0);}
     50% {transform: translateX(5px);}
@@ -60,7 +60,7 @@
 }
 
 @media (max-width : 720px) {
-    .playbutton text {
+    .play-button text {
         font-size: 75px;
     }
 }

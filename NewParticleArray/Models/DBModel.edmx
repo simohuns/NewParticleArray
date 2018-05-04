@@ -36,10 +36,10 @@
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Projects" EntityType="Model1.Projects" />
-          <EntitySet Name="Slides" EntityType="Model1.Slides" />
+          <EntitySet Name="Project" EntityType="Model1.Project" />
+          <EntitySet Name="Slide" EntityType="Model1.Slide" />
         </EntityContainer>
-        <EntityType Name="Projects">
+        <EntityType Name="Project">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -51,7 +51,7 @@
           <Property Name="ProjectTitle" Type="String" Nullable="true" />
           <Property Name="ProjectText" Type="String" Nullable="true" />
         </EntityType>
-        <EntityType Name="Slides">
+        <EntityType Name="Slide">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -67,8 +67,8 @@
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="DBModel">
-    <EntitySetMapping Name="Projects">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Projects)">
+    <EntitySetMapping Name="Project">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Project)">
         <MappingFragment StoreEntitySet="Projects">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
@@ -80,8 +80,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Slides">
-      <EntityTypeMapping TypeName="IsTypeOf(Model1.Slides)">
+    <EntitySetMapping Name="Slide">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Slide)">
         <MappingFragment StoreEntitySet="Slides">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />

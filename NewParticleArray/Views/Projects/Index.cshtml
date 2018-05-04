@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Projects";
-    List<Projects> Projects = (List<Projects>)ViewData.Model;
+    List<Project> Projects = (List<Project>)ViewData.Model;
 }
 @section videocss{
     @Styles.Render("~/Content/videocss")
@@ -24,7 +24,7 @@
                     <div class="half">
                         @* Image of project, with play button.  Uses id in popup javascript to link to YouTube video *@
                         <a id="@project.ProjectLink" class="video" href="http://youtu.be/@(project.ProjectLink)" target="_blank" style="background-image: url('@project.ImageLink');" title="@project.ImageTitle">
-                            <svg class="playbutton">
+                            <svg class="play-button">
                                 <text x="50%" y="50%" dy=".35em">&rtrif;</text>
                             </svg>
                         </a>

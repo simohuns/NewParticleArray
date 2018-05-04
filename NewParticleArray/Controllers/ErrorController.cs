@@ -21,7 +21,7 @@ namespace NewParticleArray.Controllers
                     break;
                 case 500:
                     Response.StatusDescription = "Internal Server Error";
-                    ViewBag.Message = "Ugh... there is a typo in my code syntax, or else something didn't compile right.  My bad!";
+                    ViewBag.Message = "NNNOOOooo... there is something wrong with my code.  My bad!";
                     break;
                 default:
                     Response.StatusDescription = "Error!";

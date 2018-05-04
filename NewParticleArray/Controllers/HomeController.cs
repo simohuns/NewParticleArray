@@ -12,16 +12,23 @@ namespace NewParticleArray.Controllers
 
         public ActionResult Index()
         {
-            List<Slides> slides;
+            List<Slide> slides;
 
             try
             {
                 // Order by sequence number descending to make first slide in sequence the last in the HTML (and thus the first visible)
-                slides = _db.Slides.OrderByDescending(s => s.SequenceNo).ToList();
+                slides = _db.Slide.OrderByDescending(s => s.SequenceNo).ToList();
             }
             catch (Exception ex)
             {
-                slides = null;
+                // Add a default error slide
+                slides = new List<Slide>
+                {
+                    new Slide()
+                    {
+                        SlideTitle = ex.Message
+                    }
+                };
             }
 
             return View(slides);

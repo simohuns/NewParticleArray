@@ -10,7 +10,7 @@ input[type='text'], input[type='email'], textarea {
     padding: 10px;
     margin-bottom: 15px;
     box-sizing: border-box;
-    box-shadow: lightgray 0px 0px 0px 2px inset;
+    box-shadow: lightgray 0 0 0 2px inset;
     transition: color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -22,7 +22,7 @@ textarea {
 
 input[type='text']:focus, input[type='email']:focus, textarea:focus {
     color: inherit;
-    box-shadow: dimgray 0px 0px 0px 2px inset;
+    box-shadow: dimgray 0 0 0 2px inset;
 }
 
 label, .field-validation-error {
@@ -46,19 +46,19 @@ input[type=submit] {
     outline: none;
 }
 
-#sentMailEventImage, #failMailEventImage {
+#event-image-mail-sent, #event-image-mail-fail {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     font-size: 200px;
     background: inherit;
-    box-shadow: dimgray 0px 0px 0px 4px inset;
+    box-shadow: dimgray 0 0 0 4px inset;
     color: rgba(105, 105, 105, 0);
 }
 
-#sentMailEventImage > p {
+#event-image-mail-sent > p {
     display: inline-block;
-    animation: sent;
+    animation: mail-sent;
     animation-duration: 2s;
     animation-delay: 0.5s;
     animation-timing-function: ease;
@@ -66,9 +66,9 @@ input[type=submit] {
     animation-iteration-count: 1;
 }
 
-#failMailEventImage > p {
+#event-image-mail-fail > p {
     display: inline-block;
-    animation: fail;
+    animation: mail-fail;
     animation-duration: 2s;
     animation-delay: 0.5s;
     animation-timing-function: ease;
@@ -76,7 +76,7 @@ input[type=submit] {
     animation-iteration-count: 1;
 }
 
-@keyframes sent {
+@keyframes mail-sent {
     0% { color: rgba(105, 105, 105, 0);}
     10% { color: rgba(105, 105, 105, 1);}
     25% { transform: rotateX(0deg); color: rgba(65, 163, 23, 1);}
@@ -88,7 +88,7 @@ input[type=submit] {
     100% { transform: translateY(0%); color: limegreen;}
 }
 
-@keyframes fail {
+@keyframes mail-fail {
     0% { color: rgba(105, 105, 105, 0);}
     10% { color: rgba(105, 105, 105, 1);}
     25% { transform: translateY(25%); }
@@ -103,7 +103,7 @@ input[type=submit] {
 }
 
 @media(max-width:720px) {
-    #sentMailEventImage, #failMailEventImage {
+    #event-image-mail-sent, #event-image-mail-fail {
         font-size: 100px;
     }
 }

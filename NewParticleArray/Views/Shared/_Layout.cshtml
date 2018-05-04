@@ -7,6 +7,7 @@
     <meta name="description" content="Particle Array Productions: A showcase of my vides, interests, and excess of free time">
     <meta name="author" content="Simon Hunsberger">
 
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="@(Request.Url.Scheme + System.Uri.SchemeDelimiter + Request.Url.Host)" />
     <meta property="og:image" content="@Url.Content("~/og_image.jpg")" />
     <meta property="og:title" content="@ViewBag.Title" />
@@ -26,56 +27,50 @@
     <div id="container">
         <header class="unselectable pointer">
             <div class="section">
-                <div class="paddingContainer">
+                <div class="padding-container">
                     <!--Logo-->
                     <div id="logo" title="Particle Array Productions">
-                        <p>
-                            P<span class="smallHide"><span class="smaller">article</span> []</span>
-                            <span class="bigHide">[]</span>
-                        </p>
+                        <p>P<span class="hide-small"><span class="smaller">article</span> []</span><span class="hide-big">[]</span></p>
                     </div>
 
                     <!--Menu-->
-                    <input type="checkbox" id="menuCheck" class="hide" />
-                    <label for="menuCheck" id="menu">
-                        <p id="menuExpand" class="link bigHide" title="Menu">&equiv;
-                        </p>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <@((ViewBag.Title == "Home") ? Html.Raw("p class=\"navActive\"") : Html.Raw("a class=\"navText\" href=\"" + Url.Action("Index", "Home") + "\"")) title="Home">Home
-                                    </@(ViewBag.Title == "Home" ? "p" : "a")>
-                                </li><!--
-                                --><li>
-                                    <@((ViewBag.Title == "About") ? Html.Raw("p class=\"navActive\"") : Html.Raw("a class=\"navText\" href=\"" + Url.Action("Index", "About") + "\"")) title="About">About
-                                    </@(ViewBag.Title == "About" ? "p" : "a")>
-                                </li><!--                                         
-                                --><li>
-                                    <@((ViewBag.Title == "Projects") ? Html.Raw("p class=\"navActive\"") : Html.Raw("a class=\"navText\" href=\"" + Url.Action("Index", "Projects") + "\"")) title="Projects">Projects
-                                    </@(ViewBag.Title == "Projects" ? "p" : "a")>
-                                </li><!--                                         
-                                --><li>
-                                    <@((ViewBag.Title == "Contact") ? Html.Raw("p class=\"navActive\"") : Html.Raw("a class=\"navText\" href=\"" + Url.Action("Index", "Contact") + "\"")) title="Contact">Contact
-                                    </@(ViewBag.Title == "Contact" ? "p" : "a")>
-                                </li>
-                            </ul>
-                        </nav>
-                    </label>
+                    <input type="checkbox" id="menu-check" class="hide" />
+                    <label for="menu-check" id="menu-expand" class="link hide-big" title="Menu">&equiv;</label>
+                    <nav id="menu">
+                        <ul>
+                            <li>
+                                <@((ViewBag.Title == "Home") ? Html.Raw("p class=\"nav-active\"") : Html.Raw("a class=\"nav-text\" href=\"" + Url.Action("Index", "Home") + "\"")) title="Home">Home
+                                </@(ViewBag.Title == "Home" ? "p" : "a")>
+                            </li><!--
+                            --><li>
+                                <@((ViewBag.Title == "About") ? Html.Raw("p class=\"nav-active\"") : Html.Raw("a class=\"nav-text\" href=\"" + Url.Action("Index", "About") + "\"")) title="About">About
+                                </@(ViewBag.Title == "About" ? "p" : "a")>
+                            </li><!--                                         
+                            --><li>
+                                <@((ViewBag.Title == "Projects") ? Html.Raw("p class=\"nav-active\"") : Html.Raw("a class=\"nav-text\" href=\"" + Url.Action("Index", "Projects") + "\"")) title="Projects">Projects
+                                </@(ViewBag.Title == "Projects" ? "p" : "a")>
+                            </li><!--                                         
+                            --><li>
+                                <@((ViewBag.Title == "Contact") ? Html.Raw("p class=\"nav-active\"") : Html.Raw("a class=\"nav-text\" href=\"" + Url.Action("Index", "Contact") + "\"")) title="Contact">Contact
+                                </@(ViewBag.Title == "Contact" ? "p" : "a")>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </header>
 
         <div id="content">
-            <div class="contentPush"></div>
+            <div class="content-push"></div>
 
             @RenderBody()
 
-            <div class="contentPush"></div>
+            <div class="content-push"></div>
         </div>
     
         <footer class="unselectable pointer">
             <div class="section">
-                <div class="paddingContainer">
+                <div class="padding-container">
                     <p>&copy; @DateTime.Now.Year Simon Hunsberger</p>
                 </div>
             </div>

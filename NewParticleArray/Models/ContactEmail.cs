@@ -2,7 +2,7 @@
 
 namespace NewParticleArray.Models
 {
-    public class ContactModel
+    public class ContactEmail
     {
         [Required(ErrorMessage = "I must know your name!")]
         public string Name { get; set; }

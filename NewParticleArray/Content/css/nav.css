@@ -8,13 +8,10 @@
 
 #menu {
     float: right;
-    display: inline-block;
+    display: block;
     text-align: center;
     font-size: 100%;
     width: 70%;
-}
-
-#menu nav {
     border-bottom: none;
 }
 
@@ -23,7 +20,7 @@ nav ul li {
     width: 25%;
 }
 
-.navText, .navActive {
+.nav-text, .nav-active {
     height: inherit;
     display: block;
     color: rgb(32, 32, 32);
@@ -31,12 +28,12 @@ nav ul li {
     transition: background 0.2s ease, color 0.2s ease;
 }
 
-.navText:hover, .navText:focus {
+.nav-text:hover, .nav-text:focus {
     background: lightgray;
     outline: none;
 }
 
-.navText:active, .navActive {
+.nav-text:active, .nav-active {
     color: dimgray;
     background: rgb(32, 32, 32);
 }
@@ -46,57 +43,49 @@ nav ul li {
     #logo {
         font-size: 200%;
     }
-    
+
     #menu {
         width: auto;
     }
 
-    #menu nav {
-        background: inherit;
-    }
-    
-    #menuExpand {
-        display: inline-block;
+    #menu-expand {
+        display: block;
         height: inherit;
         font-weight: bold;
         transition: background 0.2s ease, color 0.2s ease;
         float: right;
     }
     
-    #logo, #menuExpand {
+    #logo, #menu-expand {
         font-size: 175%;
         width: 50px;
         text-align: center;
     }
 
-    #menuCheck + #menu #menuExpand:hover,
-    #menuCheck + #menu #menuExpand:focus
+    #menu-check + #menu-expand:hover,
+    #menu-check + #menu-expand:focus
     {
         background: lightgray;
     }
     
-    #menuCheck:checked + #menu #menuExpand,
-    #menuCheck:checked + #menu #menuExpand:hover {
+    #menu-check:checked + #menu-expand,
+    #menu-check:checked + #menu-expand:hover {
         color: dimgray;
         background: rgb(32, 32, 32);
     }
 
-    #menuCheck:checked + #menu,
-    #menuCheck:checked + #menu {
-        background: inherit;
-    }
-    
-    #menuCheck + #menu nav {
+    #menu-check + #menu-expand + #menu {
         display: none;
     }
 
-    #menuCheck:checked + #menu nav {
+    #menu-check:checked + #menu-expand + #menu {
         position: absolute;
         left: 0;
         right: 0;
         top: 50px;
-        display: block;
-        height: inherit;
+        display: inline-block;
+        height: auto;
+        background: inherit;
         border-bottom: 2px solid rgb(32, 32, 32);
     }
     

@@ -12,15 +12,25 @@ namespace NewParticleArray.Controllers
 
         public ActionResult Index()
         {
-            List<Projects> projects;
+            List<Project> projects;
 
             try
             {
-                projects = _db.Projects.OrderBy(p => p.SequenceNo).ToList();
+                projects = _db.Project.OrderBy(p => p.SequenceNo).ToList();
             }
             catch (Exception ex)
             {
-                projects = null;
+                // Add a default error project
+                projects = new List<Project>
+                {
+                    new Project()
+                    {
+                        ProjectLink = System.Web.Configuration.WebConfigurationManager.AppSettings["ErrorVideo"],
+                        ImageTitle = ex.Message,
+                        ProjectTitle = ex.Source,
+                        ProjectText =  ex.Message
+                    }
+                };
             }
 
             return View(projects);

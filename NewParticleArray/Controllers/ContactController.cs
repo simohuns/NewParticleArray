@@ -18,7 +18,7 @@ namespace NewParticleArray.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(ContactModel c)
+        public ActionResult Index(ContactEmail c)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace NewParticleArray.Controllers
 
 
         // Returns the failed sent model back to the original Contact view
-        public ActionResult Retry(ContactModel c)
+        public ActionResult Retry(ContactEmail c)
         {
             c.Success = false;
             return View("Index", c);
