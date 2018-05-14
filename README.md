@@ -5,7 +5,9 @@ Feel free to take a look around!  If you have questions/comments, send an email 
 
 
 ## Setup notes!
-**Web.config** has been altered to remove the connection strings and email account settings, for security reasons :D.  The website will run without any additional setup, but much of it will be empty.  So, in order to bring everything up to speed you'll need to...
+Out of the box, the website will need SSL setup on the local machine and will attempt to use https out of port 1052. You can undo all of this from the project properties and and by removing RequireHttpsAttribute from **FilterConfig.cs**.
+
+Also, **Web.config** has been altered to remove the connection strings and email account settings, for security reasons :D.  So, in order to bring everything up to speed you'll need to...
 
 ### Recreate the Database
 Use the included **DBModel.edmx** in the **Models** folder.  The structure is there, just right-click and _Generate Database from Model_.  While populating with your own values, take note of the following:
