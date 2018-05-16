@@ -244,8 +244,8 @@ article p:last-of-type {
     }
     
     .padding-container {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 3%;
+        padding-right: 3%;
     }
     
     #content {
@@ -253,7 +253,7 @@ article p:last-of-type {
     }
 
     article {
-        padding: 5%;
+        padding: 3%;
     }
     
     .half {

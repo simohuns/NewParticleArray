@@ -1,4 +1,4 @@
-﻿@model NewParticleArray.Models.ContactModel
+﻿@model NewParticleArray.Models.ContactEmail
 
 @section formcss{
     @Styles.Render("~/Content/formcss")
@@ -12,7 +12,8 @@
         <div class="full">
             <div class="image bottom-space" title="@(ViewBag.Title)">
                 <div id="event-image-container" class="unselectable pointer">
-                    <div id="@((Model.Success) ? "event-image-mail-sent" : "event-image-mail-fail")">
+                    <!-- change this back -->
+                    <div id="@((!Model.Success) ? "event-image-mail-sent" : "event-image-mail-fail")">
                         <p>&#x2709;</p>
                     </div>
                 </div>

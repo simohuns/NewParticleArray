@@ -15,7 +15,11 @@
     border-bottom: none;
 }
 
-nav ul li {
+#menu ul {
+    display: flex;
+}
+
+#menu ul li {
     display: inline-block;
     width: 25%;
 }
@@ -88,8 +92,12 @@ nav ul li {
         background: inherit;
         border-bottom: 2px solid rgb(32, 32, 32);
     }
-    
-    nav ul li {
+
+    #menu ul {
+        display: block;
+    }
+
+    #menu ul li {
         width: 100%;
     }
 }
