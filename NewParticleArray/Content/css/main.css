@@ -1,10 +1,7 @@
 @font-face {
     font-family: 'Manteka';
-    src: url('../../fonts/Manteka.eot');
-    src: url('../../fonts/Manteka.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/Manteka.woff') format('woff'),
-         url('../../fonts/Manteka.ttf') format('truetype'),
-         url('../../fonts/Manteka.svg#manteka') format('svg');
+    src: url('../../fonts/Manteka.woff2') format('woff2'),
+         url('../../fonts/Manteka.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

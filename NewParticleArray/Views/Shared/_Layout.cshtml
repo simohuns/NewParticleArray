@@ -3,18 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="particle, array, [], productions, videos, movies, editing, special, effects, vfx, simon, hunsberger, resume">
-    <meta name="description" content="Particle Array Productions: A showcase of my vides, interests, and excess of free time">
+    <meta name="keywords" content="Particle,Array,Productions,Video,Editing,Special,Effect,Simon,Hunsberger,Resume">
+    <meta name="description" content="Particle Array Productions: A showcase of my videos, interests, and excess of free time">
     <meta name="author" content="Simon Hunsberger">
-    <!--og Tags-->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="@(Request.Url.Scheme + System.Uri.SchemeDelimiter + Request.Url.Host)" />
-    <meta property="og:image" content="@Url.Content("~/og_image.jpg")" />
+
     <meta property="og:title" content="@ViewBag.Title" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="@Url.Content("~/og_image.jpg")" />
+    <meta property="og:image:alt" content="Particle Array Productions logo" />
+    <meta property="og:url" content="@(Request.Url.Scheme + System.Uri.SchemeDelimiter + Request.Url.Host)" />
     <meta property="og:description" content="Particle Array Productions: A showcase of my videos, interests, and excess of free time" />
 
     <title>@ViewBag.Title - Particle Array</title>
-    <link href="@Url.Content("~/favicon.ico")" rel="icon" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/favicon.ico")" />
 
     @Styles.Render("~/Content/maincss")
     @RenderSection("slideshowcss", required: false)
@@ -27,11 +28,9 @@
         <header class="unselectable pointer">
             <div class="section">
                 <div class="padding-container">
-                    <!--Logo-->
                     <div id="logo" title="Particle Array Productions">
                         <p>P<span class="hide-small"><span class="smaller">article</span> []</span><span class="hide-big">[]</span></p>
                     </div>
-                    <!--Menu-->
                     <input type="checkbox" id="menu-check" class="hide" />
                     <label for="menu-check" id="menu-expand" class="link hide-big" title="Menu">&equiv;</label>
                     <nav id="menu">
@@ -67,7 +66,6 @@
             </div>
         </footer>
     </div>
-
     @RenderSection("jqueryValidate", required: false)
 </body>
 </html>

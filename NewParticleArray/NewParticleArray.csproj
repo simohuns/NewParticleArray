@@ -186,11 +186,7 @@
     <Content Include="Content\images\slides\5.jpg" />
     <Content Include="Content\images\slides\6.jpg" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\manteka.svg" />
     <Content Include="Global.asax" />
-    <Content Include="fonts\manteka.eot" />
-    <Content Include="fonts\manteka.ttf" />
-    <Content Include="fonts\manteka.woff" />
     <Content Include="Models\DBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DBModel.Context.cs</LastGenOutput>
@@ -211,6 +207,8 @@
     <Content Include="Models\DBModel.edmx.diagram">
       <DependentUpon>DBModel.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\manteka.woff" />
+    <Content Include="fonts\manteka.woff2" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
