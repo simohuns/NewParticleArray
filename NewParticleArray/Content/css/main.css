@@ -153,6 +153,12 @@ article p:last-of-type {
     background-size: cover;
 }
 
+#image-profile {
+    background-image: url('../../Content/images/profile.gif');
+    background-size: contain;
+    box-shadow: 0 0 5px 1px lightgray inset;
+}
+
 .bottom-space {
     margin-bottom: 15px;
 }
@@ -268,6 +274,11 @@ article p:last-of-type {
     
     .image, .video {
         height: 200px;
+    }
+
+    #image-profile {
+        background-position: center -10px;
+        background-size: 300px 300px;
     }
     
     .hide-small {
