@@ -8,6 +8,6 @@ namespace NewParticleArray
 {
     public static class GlobalVariable
     {
-        public static readonly IList<string> Pages = new ReadOnlyCollection<string>(new List<string> { "Home", "About", "Projects", "Contact" });
+        public enum Pages { Home, About, Projects, Contact };
     }
 }

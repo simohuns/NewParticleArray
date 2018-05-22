@@ -165,6 +165,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="android-chrome-192x192.png" />
+    <Content Include="android-chrome-256x256.png" />
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="browserconfig.xml" />
     <Content Include="Content\css\form.css" />
     <Content Include="Content\css\main.css" />
     <Content Include="Content\css\nav.css" />
@@ -172,7 +176,7 @@
     <Content Include="Content\css\slideshow.css" />
     <Content Include="Content\css\video.css" />
     <Content Include="Content\images\bg.png" />
-    <Content Include="Content\images\profile.png" />
+    <Content Include="Content\images\profile.gif" />
     <Content Include="Content\images\projects\01_airlock.jpg" />
     <Content Include="Content\images\projects\02_adrift.jpg" />
     <Content Include="Content\images\projects\03_diary.jpg" />
@@ -185,6 +189,8 @@
     <Content Include="Content\images\slides\4.jpg" />
     <Content Include="Content\images\slides\5.jpg" />
     <Content Include="Content\images\slides\6.jpg" />
+    <Content Include="favicon-16x16.png" />
+    <Content Include="favicon-32x32.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Models\DBModel.Context.tt">
@@ -197,6 +203,7 @@
       <LastGenOutput>DBModel.cs</LastGenOutput>
       <DependentUpon>DBModel.edmx</DependentUpon>
     </Content>
+    <Content Include="mstile-150x150.png" />
     <Content Include="og_image.jpg" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -236,6 +243,7 @@
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Contact\Result.cshtml" />
     <Content Include="Views\Projects\Index.cshtml" />
+    <None Include="manifest.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

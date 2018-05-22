@@ -15,7 +15,12 @@
     <meta property="og:description" content="Particle Array Productions: A showcase of my videos, interests, and excess of free time" />
 
     <title>@ViewBag.Title - Particle Array</title>
-    <link rel="icon" type="image/x-icon" href="@Url.Content("~/favicon.ico")" />
+    <link rel="apple-touch-icon" sizes="180x180" href="@Url.Content("~/apple-touch-icon.png")">
+    <link rel="icon" type="image/png" sizes="32x32" href="@Url.Content("~/favicon-32x32.png")">
+    <link rel="icon" type="image/png" sizes="16x16" href="@Url.Content("~/favicon-16x16.png")">
+    <link rel="manifest" href="@Url.Content("~/manifest.json")">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#ffffff">
 
     @Styles.Render("~/Content/maincss")
     @RenderSection("slideshowcss", required: false)
@@ -35,7 +40,7 @@
                     <label for="menu-check" id="menu-expand" class="link hide-big" title="Menu">&equiv;</label>
                     <nav id="menu">
                         <ul>
-                            @foreach (var page in GlobalVariable.Pages)
+                            @foreach (string page in Enum.GetNames(typeof(GlobalVariable.Pages)))
                             {
                             <li>
                                 @if (IsCurrentPage(page))
