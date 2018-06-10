@@ -10,7 +10,9 @@
 <div id="slideshow">
     <ul>
         @{
-            if (Slides != null)
+            double showLength = 0;
+            double.TryParse(System.Web.Configuration.WebConfigurationManager.AppSettings["HomeSlideshowLength"], out showLength);
+            if (Slides != null && showLength > 0)
             {
                 foreach (var slide in Slides)
                 {
@@ -20,8 +22,8 @@
                     }
                     else
                     {
-                        double slideDelay = Math.Round(slide.ShowLength - (Slides.Count - (slide.SequenceNo - 1)) * (slide.ShowLength / Slides.Count), 2);
-                        <li style="background: black url('@slide.SlideLink') no-repeat center center; background-size: cover; animation: fade @(slide.ShowLength)s @(slideDelay)s infinite;" title="@slide.SlideTitle"></li>
+                        double slideDelay = Math.Round(showLength - (Slides.Count - (slide.SequenceNo - 1)) * (showLength / Slides.Count), 2);
+                        <li style="background: black url('@slide.SlideLink') no-repeat center center; background-size: cover; animation: fade @(showLength)s @(slideDelay)s infinite;" title="@slide.SlideTitle"></li>
                     }
                 }
             }

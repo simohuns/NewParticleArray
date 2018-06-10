@@ -27,7 +27,6 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SequenceNo" Type="int" Nullable="false" />
-    <Property Name="ShowLength" Type="float" Nullable="false" />
     <Property Name="SlideTitle" Type="nvarchar(max)" Nullable="true" />
     <Property Name="SlideLink" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
@@ -57,7 +56,6 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SequenceNo" Type="Int32" Nullable="false" />
-          <Property Name="ShowLength" Type="Double" Nullable="false" />
           <Property Name="SlideTitle" Type="String" Nullable="true" />
           <Property Name="SlideLink" Type="String" Nullable="false" />
         </EntityType>
@@ -85,7 +83,6 @@
         <MappingFragment StoreEntitySet="Slides">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
-          <ScalarProperty Name="ShowLength" ColumnName="ShowLength" />
           <ScalarProperty Name="SlideTitle" ColumnName="SlideTitle" />
           <ScalarProperty Name="SlideLink" ColumnName="SlideLink" />
         </MappingFragment>
