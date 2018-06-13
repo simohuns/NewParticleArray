@@ -78,6 +78,6 @@
 @functions {
     public bool IsCurrentPage(string page)
     {
-        return ViewBag.Title.ToLower().Contains(page.ToLower());
+        return (ViewBag.Title != null) ? ViewBag.Title.ToLower().Contains(page.ToLower()) : false;
     }
 }

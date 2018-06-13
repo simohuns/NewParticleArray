@@ -12,8 +12,7 @@
         <div class="full">
             <div class="image bottom-space" title="@(ViewBag.Title)">
                 <div id="event-image-container" class="unselectable pointer">
-                    <!-- change this back -->
-                    <div id="@((!Model.Success) ? "event-image-mail-sent" : "event-image-mail-fail")">
+                    <div id="@((Model.Success) ? "event-image-mail-sent" : "event-image-mail-fail")">
                         <p>&#x2709;</p>
                     </div>
                 </div>

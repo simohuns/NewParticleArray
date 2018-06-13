@@ -6,10 +6,10 @@
     <edmx:StorageModels>
     <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="Model1StoreContainer">
-    <EntitySet Name="Projects" EntityType="Model1.Store.Projects" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Slides" EntityType="Model1.Store.Slides" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Project" EntityType="Model1.Store.Project" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Slide" EntityType="Model1.Store.Slide" store:Type="Tables" Schema="dbo" />
   </EntityContainer>
-  <EntityType Name="Projects">
+  <EntityType Name="Project">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -21,7 +21,7 @@
     <Property Name="ProjectTitle" Type="nvarchar(max)" Nullable="true" />
     <Property Name="ProjectText" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
-  <EntityType Name="Slides">
+  <EntityType Name="Slide">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -67,7 +67,7 @@
   <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="DBModel">
     <EntitySetMapping Name="Project">
       <EntityTypeMapping TypeName="IsTypeOf(Model1.Project)">
-        <MappingFragment StoreEntitySet="Projects">
+        <MappingFragment StoreEntitySet="Project">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
           <ScalarProperty Name="ProjectLink" ColumnName="ProjectLink" />
@@ -80,7 +80,7 @@
     </EntitySetMapping>
     <EntitySetMapping Name="Slide">
       <EntityTypeMapping TypeName="IsTypeOf(Model1.Slide)">
-        <MappingFragment StoreEntitySet="Slides">
+        <MappingFragment StoreEntitySet="Slide">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="SequenceNo" ColumnName="SequenceNo" />
           <ScalarProperty Name="SlideTitle" ColumnName="SlideTitle" />

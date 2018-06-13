@@ -177,11 +177,11 @@
     <Content Include="Content\css\video.css" />
     <Content Include="Content\images\bg.png" />
     <Content Include="Content\images\profile.gif" />
-    <Content Include="Content\images\projects\01_airlock.jpg" />
-    <Content Include="Content\images\projects\02_adrift.jpg" />
-    <Content Include="Content\images\projects\03_diary.jpg" />
-    <Content Include="Content\images\projects\04_audio.jpg" />
-    <Content Include="Content\images\projects\05_helicopter.jpg" />
+    <Content Include="Content\images\projects\01_indefinite.jpg" />
+    <Content Include="Content\images\projects\02_fruit.jpg" />
+    <Content Include="Content\images\projects\03_adrift.jpg" />
+    <Content Include="Content\images\projects\04_diary.jpg" />
+    <Content Include="Content\images\projects\05_audio.jpg" />
     <Content Include="Content\images\projects\06_walk.jpg" />
     <Content Include="Content\images\slides\1.jpg" />
     <Content Include="Content\images\slides\2.jpg" />

@@ -47,14 +47,10 @@ namespace NewParticleArray.Controllers
                         msg.Dispose();
 
                         Session["MailSent"] = c.Success = true;
-                        ViewBag.Title = "Message Sent";
-                        ViewBag.Message = "I should get back to you soon!";
                     }
                     catch (Exception ex)
                     {
                         Session["MailSent"] = c.Success = false;
-                        ViewBag.Title = "Couldn't Send";
-                        ViewBag.Message = (ex.InnerException != null) ? ex.InnerException.Message : ex.Message;
                     }
                 }
 
@@ -63,6 +59,9 @@ namespace NewParticleArray.Controllers
                 {
                     c.Success = (bool)Session["MailSent"];
                 }
+
+                ViewBag.Title = (c.Success) ? "Message Sent" : "Couldn't Send";
+                ViewBag.Message = (c.Success) ? "I should get back to you soon!" : "Error processing your message";
 
                 return View("Result", c);
             }
