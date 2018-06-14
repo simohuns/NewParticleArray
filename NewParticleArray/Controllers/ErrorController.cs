@@ -16,13 +16,17 @@ namespace NewParticleArray.Controllers
 
             switch (Response.StatusCode)
             {
+                case (int)HttpStatusCode.Forbidden:
+                    Response.StatusDescription = "Nuh Uh, No Snooping!";
+                    ViewBag.Message = "I set things up so you aren't allowed to do that.";
+                    break;
                 case (int)HttpStatusCode.NotFound:
                     Response.StatusDescription = "File Not Found";
-                    ViewBag.Message = "We are all searching for something, but right now the server can't find that web page.  Sorry about that!";
+                    ViewBag.Message = "We are all searching for something, but right now the server can't find that web page.";
                     break;
                 case (int)HttpStatusCode.InternalServerError:
-                    Response.StatusDescription = "Internal Server Error";
-                    ViewBag.Message = "Oh no! There is something wrong with my code.  My bad!";
+                    Response.StatusDescription = "All Your Base Are Belong To Us";
+                    ViewBag.Message = "Oh no! My code has a really bad bug in it!  Darn, I need to fix that.";
                     break;
                 case (int)HttpStatusCode.OK:
                     Response.StatusDescription = "Looking For Trouble?";

@@ -3,7 +3,14 @@
     ViewBag.Title = "Error " + Response.StatusCode;
 }
 <article>
+    @if (Response.StatusCode == (int)HttpStatusCode.OK)
+    {
+    <h2><strike>Error!</strike> ...not</h2>
+    }
+    else
+    {
     <h2>Error!</h2>
+    }
     <h3></h3>
 
     <div class="columns">
