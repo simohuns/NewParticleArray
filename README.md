@@ -1,6 +1,6 @@
-# NewParticleArray
-My original resume website, but reworked to use MVC and a responsive design.
-Feel free to take a look around!  If you have questions/comments, send an email to contact@particlearray.net
+# ParticleArray-MVC
+My original resume website, with MVC and a responsive design... quite novel deisgns from a beginning developer!
+This repository is no longer used but I'm keeping it around for posterity's sake.
 
 
 
